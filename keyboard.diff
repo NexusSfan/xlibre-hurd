@@ -1,0 +1,81 @@
+#SPDX-License-Identifier: CC0
+# note: broken
+diff --git a/debian/changelog b/debian/changelog
+index 4bab118..641311f 100644
+--- a/debian/changelog
++++ b/debian/changelog
+@@ -1,4 +1,4 @@
+-xserver-xorg-input-keyboard (1:2.0.0-1) UNRELEASED; urgency=medium
++xserver-xlibre-input-keyboard (1:2.0.0-1) UNRELEASED; urgency=medium
+ 
+   [ Timo Aaltonen ]
+   * control: Fix Vcs-Git url.
+diff --git a/debian/control b/debian/control
+index 4c8ccf7..899a95c 100644
+--- a/debian/control
++++ b/debian/control
+@@ -1,18 +1,18 @@
+-Source: xserver-xorg-input-keyboard
++Source: xserver-xlibre-input-keyboard
+ Section: x11
+ Priority: optional
+ Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+ Build-Depends:
+  debhelper-compat (= 13),
+  pkgconf,
+- xserver-xorg-dev,
++ xserver-xlibre-dev,
+  x11proto-dev,
+  xutils-dev
+ Standards-Version: 4.7.0
+ Vcs-Git: https://anonscm.debian.org/git/pkg-xorg/driver/xserver-xorg-input-keyboard.git
+ Vcs-Browser: https://anonscm.debian.org/git/pkg-xorg/driver/xserver-xorg-input-keyboard.git
+ 
+-Package: xserver-xorg-input-kbd
++Package: xserver-xlibre-input-kbd
+ Architecture: hurd-any
+ Depends:
+  ${shlibs:Depends},
+@@ -28,7 +28,7 @@ Description: X.Org X server -- keyboard input driver
+  .
+  This package is built from the X.org xf86-input-keyboard driver module.
+ 
+-Package: xserver-xorg-input-kbd-udeb
++Package: xserver-xlibre-input-kbd-udeb
+ XC-Package-Type: udeb
+ Section: debian-installer
+ Architecture: hurd-any
+diff --git a/debian/xserver-xlibre-input-kbd-udeb.install b/debian/xserver-xlibre-input-kbd-udeb.install
+new file mode 100644
+index 0000000..24e8ed2
+--- /dev/null
++++ b/debian/xserver-xlibre-input-kbd-udeb.install
+@@ -0,0 +1 @@
++usr/lib/*/xorg/modules/input/*.so
+diff --git a/debian/xserver-xlibre-input-kbd.install b/debian/xserver-xlibre-input-kbd.install
+new file mode 100644
+index 0000000..7f120b5
+--- /dev/null
++++ b/debian/xserver-xlibre-input-kbd.install
+@@ -0,0 +1,2 @@
++usr/lib/*/xorg/modules/input/*.so
++usr/share/man
+diff --git a/debian/xserver-xorg-input-kbd.links b/debian/xserver-xlibre-input-kbd.links
+similarity index 100%
+rename from debian/xserver-xorg-input-kbd.links
+rename to debian/xserver-xlibre-input-kbd.links
+diff --git a/debian/xserver-xorg-input-kbd-udeb.install b/debian/xserver-xorg-input-kbd-udeb.install
+deleted file mode 100644
+index 4ac2576..0000000
+--- a/debian/xserver-xorg-input-kbd-udeb.install
++++ /dev/null
+@@ -1 +0,0 @@
+-usr/lib/xorg/modules/input/*.so
+diff --git a/debian/xserver-xorg-input-kbd.install b/debian/xserver-xorg-input-kbd.install
+deleted file mode 100644
+index 97e3c20..0000000
+--- a/debian/xserver-xorg-input-kbd.install
++++ /dev/null
+@@ -1,2 +0,0 @@
+-usr/lib/xorg/modules/input/*.so
+-usr/share/man

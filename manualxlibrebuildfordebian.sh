@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #SPDX-License-Identifier: CC0-1.0
 
-# remove this if you do have systemd
+# hurd has no systemd support
 export DEB_BUILD_PROFILES=nosystemd
 
-mkdir ~/XLibreDebianPkgs
-cd ~/XLibreDebianPkgs
+mkdir XLibreDebianPkgs
+cd ./XLibreDebianPkgs
 
 function build_package() {
     local name=$1
