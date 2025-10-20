@@ -1,6 +1,6 @@
 XLibre for Hurd
 ---------------
 
-The first thing you have to do is `sudo apt build-dep xorg`.
+The first thing you have to do is `sudo apt build-dep xorg xorg-server` and `sudo apt install meson`.
 Then compile `xserver-xlibre-dev` using `./xserver-xlibre-dev.sh`.
 After that, compile the software using `make`.
