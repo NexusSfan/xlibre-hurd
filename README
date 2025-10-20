@@ -7,3 +7,4 @@ The first thing you have to do is install build dependencies:
 
 Then compile `xserver-xlibre-dev` using `./xserver-xlibre-dev.sh`.
 After that, compile the software using `make`.
+Finally, install the software with `./install.sh`.
