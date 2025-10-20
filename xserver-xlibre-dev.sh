@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: CC0
 
-#install `xserver-xlibre-dev`
+# install `xserver-xlibre-dev`
 
 mkdir xlibre-devs-libs
 cd ./xlibre-devs-libs
