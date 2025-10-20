@@ -1,0 +1,6 @@
+XLibre for Hurd
+---------------
+
+The first thing you have to do is `sudo apt build-dep xorg`.
+Then compile `xserver-xlibre-dev` using `./xserver-xlibre-dev.sh`.
+After that, compile the software using `make`.
