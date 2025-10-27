@@ -11,5 +11,5 @@ html = bs4.BeautifulSoup(r.text, "lxml")
 
 for link in html.find_all("a"):
     if link.get("href").startswith("xserver-xorg-input-keyboard_"):
-        print(link.get("href"))
+        print(f"{url}{link.get("href")}")
         break
