@@ -13,5 +13,5 @@ sudo apt install \
                 ./XLibreDebianPkgs/xserver-xlibre-input-synaptics/xserver-xlibre-input-synaptics_*.deb \
                 ./XLibreDebianPkgs/xserver-xlibre-video-fbdev/xserver-xlibre-video-fbdev_*.deb \
                 ./XLibreDebianPkgs/xserver-xlibre-video-vesa/xserver-xlibre-video-vesa_*.deb \
-                ./CustomXLibrePkgs/xserver-xlibre-input-mouse_*.deb \
-                ./CustomXLibrePkgs/xserver-xlibre-input-kbd_*.deb
+                ./XLibreDebianPkgs/xserver-xlibre-input-mouse/xserver-xlibre-input-mouse_*.deb \
+                ./XLibreDebianPkgs/xserver-xlibre-input-keyboard/xserver-xlibre-input-kbd_*.deb

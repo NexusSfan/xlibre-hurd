@@ -12,7 +12,7 @@ function build_package() {
 
     mkdir "$name"
     cd "$name" || exit
-    git clone "https://github.com/xlibre-deb/$name"
+    git clone "https://github.com/xlibre-debian/$name"
     cd "$name" || exit
     dpkg-buildpackage -b --no-sign
     cd ../.. || exit
@@ -23,6 +23,8 @@ build_package xlibre-server
 build_package xserver-xlibre-input-elographics
 build_package xserver-xlibre-input-evdev
 build_package xserver-xlibre-input-libinput
+build_package xserver-xlibre-input-mouse
+build_package xserver-xlibre-input-keyboard
 build_package xserver-xlibre-input-synaptics
 build_package xserver-xlibre-input-vmmouse
 build_package xserver-xlibre-input-void
