@@ -1,6 +1,6 @@
 #SPDX-License-Identifier: CC0
 
-all: XLibreDebianPkgs CustomXLibrePkgs
+all: XLibreDebianPkgs
 
 XLibreDebianPkgs:
 	./manualxlibrebuildfordebian.sh
