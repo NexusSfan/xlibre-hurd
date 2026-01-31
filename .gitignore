@@ -1,4 +1,5 @@
 CustomXLibrePkgs
 XLibreDebianPkgs
 xlibre-devs-libs
+xlibre-xorgproto
 *.deb

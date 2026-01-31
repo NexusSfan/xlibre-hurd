@@ -3,8 +3,9 @@ XLibre for Hurd
 
 The first thing you have to do is install build dependencies:
 * `sudo apt build-dep xorg xorg-server`
-* `sudo apt install meson libdrm-dev libdbus-1-dev libepoxy-dev`
+* `sudo apt install meson libdrm-dev libdbus-1-dev libepoxy-dev libseat-dev`
 
+First, install the latest `xorgproto` using `./xorgproto.sh`.
 Then compile `xserver-xlibre-dev` using `./xserver-xlibre-dev.sh`.
 After that, compile the software using `make`.
 Finally, install the software with `./install.sh`.
