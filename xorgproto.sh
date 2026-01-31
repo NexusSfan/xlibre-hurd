@@ -9,7 +9,7 @@ cd ./xlibre-xorgproto
 # hurd has no systemd support
 export DEB_BUILD_PROFILES=nosystemd
 
-git clone https://github.com/xlibre-debian/xorgproto
+git clone https://github.com/xlibre-debian/xorgproto --depth 1
 cd ./xorgproto
 dpkg-buildpackage -b --no-sign
 

@@ -12,7 +12,7 @@ function build_package() {
 
     mkdir "$name"
     cd "$name" || exit
-    git clone "https://github.com/xlibre-debian/$name"
+    git clone "https://github.com/xlibre-debian/$name" --depth 1
     cd "$name" || exit
     dpkg-buildpackage -b --no-sign
     cd ../.. || exit

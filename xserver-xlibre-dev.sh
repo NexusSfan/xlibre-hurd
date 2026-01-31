@@ -9,7 +9,7 @@ cd ./xlibre-devs-libs
 # hurd has no systemd support
 export DEB_BUILD_PROFILES=nosystemd
 
-git clone https://github.com/xlibre-debian/xlibre-server
+git clone https://github.com/xlibre-debian/xlibre-server --depth 1
 cd ./xlibre-server
 dpkg-buildpackage -b --no-sign
 
