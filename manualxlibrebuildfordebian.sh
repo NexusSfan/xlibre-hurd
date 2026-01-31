@@ -13,7 +13,7 @@ function build_package() {
 
     mkdir "$name"
     cd "$name" || exit
-    git clone "https://github.com/xlibre-debian/$name" --depth 1
+    git clone "https://github.com/xlibre-debian/$name"
     cd "$name" || exit
     gbp buildpackage --git-builder="debuild -i -I -us -uc" --git-debian-branch="xlibre/latest"
     cd ../.. || exit
