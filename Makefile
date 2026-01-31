@@ -6,7 +6,8 @@ XLibreDebianPkgs:
 	./manualxlibrebuildfordebian.sh
 
 clean:
-	rm -rf XLibreDebianPkgs
-	rm -rf xlibre-devs-libs
+	rm -rf XLibreDebianPkgs || true
+	rm -rf xlibre-devs-libs || true
+	rm -rf xlibre-xorgproto || true
 
 .PHONY: all clean
