@@ -3,6 +3,7 @@
 
 # hurd has no systemd support
 export DEB_BUILD_PROFILES=nosystemd
+export DEB_BUILD_OPTIONS=nocheck
 
 mkdir XLibreDebianPkgs
 cd ./XLibreDebianPkgs
@@ -14,7 +15,7 @@ function build_package() {
     cd "$name" || exit
     git clone "https://github.com/xlibre-debian/$name" --depth 1
     cd "$name" || exit
-    dpkg-buildpackage -b --no-sign
+    gbp buildpackage --git-builder="debuild -i -I -us -uc" --git-debian-branch="xlibre/latest"
     cd ../.. || exit
 }
 
