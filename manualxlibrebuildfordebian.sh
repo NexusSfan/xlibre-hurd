@@ -15,7 +15,9 @@ function build_package() {
     cd "$name" || exit
     git clone "https://github.com/xlibre-debian/$name"
     cd "$name" || exit
-    gbp buildpackage --git-builder="debuild -i -I -us -uc" --git-debian-branch="xlibre/latest"
+    git fetch origin pristine-tar:pristine-tar 2>/dev/null || true
+    git fetch origin upstream/latest:upstream/latest 2>/dev/null || true
+    gbp buildpackage --git-builder="debuild -i -I -us -uc" --git-debian-branch="xlibre/latest" --git-upstream-branch="upstream/latest" --git-pristine-tar
     cd ../.. || exit
 }
 
